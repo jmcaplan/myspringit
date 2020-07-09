@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
@@ -17,6 +18,11 @@ import lombok.NonNull;
 @NoArgsConstructor
 public class Link extends Auditable {
 	
+	public Link(String title, String url) {
+		this.title = title;
+		this.url = url;
+	}
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -27,5 +33,9 @@ public class Link extends Auditable {
 	
 	@OneToMany(mappedBy = "link")
 	private List<Comment> comments = new ArrayList<>();
+	
+	public void addComment(Comment comment) {
+		comments.add(comment);
+	}
 	
 }
