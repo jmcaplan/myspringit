@@ -2,6 +2,8 @@ package com.vega.myspringit;
 
 import java.util.Iterator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +19,9 @@ import com.vega.myspringit.repository.LinkRepository;
 @EnableJpaAuditing
 public class MyspringitApplication {
 
+	//this might be wrong, have to go back to the logging and debugging video
+	private static final Logger log = LoggerFactory.getLogger(MyspringitApplication.class);
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MyspringitApplication.class, args);
 		System.out.println("Hello to me");
