@@ -26,16 +26,17 @@ public class MyspringitApplication {
 		
 	}
 	
-	//@Bean
+	@Bean
 	CommandLineRunner runner(LinkRepository linkRepository, CommentRepository commentRepository) {
 		return args -> {
 			Link link1 = new Link("Getting Started with Spring Boot 2", "https://google.com");
 			linkRepository.save(link1);
 			
+			/*
 			Comment comment1 = new Comment("this link is gevaldik", link1);
 			commentRepository.save(comment1);
-			link1.addComment(comment1);
-			
+			//link1.addComment(comment1);
+			*/
 		};
 	}
 	
