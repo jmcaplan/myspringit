@@ -26,7 +26,7 @@ public class MyspringitApplication {
 		
 	}
 	
-	@Bean
+	//@Bean
 	CommandLineRunner runner(LinkRepository linkRepository, CommentRepository commentRepository) {
 		return args -> {
 			Link link1 = new Link("Getting Started with Spring Boot 2", "https://google.com");
