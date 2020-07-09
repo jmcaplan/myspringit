@@ -8,20 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 @Entity
-@Data
-@NoArgsConstructor
+@RequiredArgsConstructor @NoArgsConstructor
+@Getter @Setter
+@ToString
 public class Link extends Auditable {
-	
-	public Link(String title, String url) {
-		this.title = title;
-		this.url = url;
-	}
 
 	@Id
 	@GeneratedValue

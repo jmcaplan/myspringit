@@ -5,19 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 @Entity
-@Data
-@NoArgsConstructor
+@RequiredArgsConstructor @NoArgsConstructor
+@Getter @Setter
+@ToString
 public class Comment extends Auditable {
-
-	public Comment(String body, Link link) {
-		this.body = body;
-		this.link = link;
-	}
 
 	@Id
 	@GeneratedValue
